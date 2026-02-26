@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cvq6fnkl27250"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(10, 1, 10)
+
+[node name="Wall" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4.8816)
+size = Vector3(10, 2, 0.25)
+
+[node name="Hole" type="CSGBox3D" parent="Floor/Wall"]
+operation = 2
+size = Vector3(1, 1.5, 1)
+
+[node name="Wall2" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -4.882)
+size = Vector3(10, 2, 0.25)
+
+[node name="Wall3" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.88353, 1, -0.00488091)
+size = Vector3(10, 2, 0.25)
+
+[node name="Wall4" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.86956, 1, 0)
+size = Vector3(10, 2, 0.25)
